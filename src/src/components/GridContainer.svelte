@@ -1,4 +1,5 @@
 <script>
+    import {t} from "../locales/i18n.js";
     import {writable} from 'svelte/store';
     import {onMount, onDestroy} from 'svelte';
     import {goto} from "$app/navigation";
@@ -12,7 +13,12 @@
     let isClosing = false;
 
     const dynamicButtons = [
+        {key: "aboutme.title", subClass: "large-tile", link: null, content: AboutMe},
+        {key: "github", subClass: "small-two-tall", link: "https://github.com/", content: null},
         {key: "workexperience.title", subClass: "medium-tile", link: null, content: WorkExperience},
+        {key: "linkedin", subClass: "medium-tile", link: "https://www.linkedin.com/in//", content: null},
+        {key: "education.title", subClass: "medium-tile", link: null, content: Education},
+        {key: "skills.title", subClass: "one-long-tile", link: null, content: Skills}
     ];
 
     function expandTile(name, link) {
@@ -58,8 +64,8 @@
 
 <div class="grid-container">
     {#each dynamicButtons as {key, subClass, link, content}}
-        <button class="grid-tile {subClass}" on:click={() => expandTile(key, link)}>
-            <span>{key}</span>
+        <button class="grid-tile {subClass}" on:click={() => expandTile($t(key), link)}>
+            <span>{$t(key)}</span>
         </button>
     {/each}
 </div>
@@ -73,7 +79,7 @@
             </button>
             <h1 class="expanded-title">{$expandedTile}</h1>
             {#each dynamicButtons as {key, content}}
-                {#if $expandedTile === (key)}
+                {#if $expandedTile === $t(key)}
                     <svelte:component this={content}/>
                 {/if}
             {/each}

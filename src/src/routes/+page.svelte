@@ -6,6 +6,7 @@
     import CustomCursor from '../components/CustomCursor.svelte';
     import GridContainer from '../components/GridContainer.svelte';
     import Introsection from "../components/Introsection.svelte";
+    import { onNavigate } from '$app/navigation';
     import AboutMe from "../components/Tiles/AboutMe.svelte";
     import ThisWebsite from "../components/ThisWebsite.svelte";
     import WorkExperience from "../components/Tiles/WorkExperience.svelte";
