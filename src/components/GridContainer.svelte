@@ -1,18 +1,16 @@
 <script>
-    import {writable} from 'svelte/store';
-    import {onMount, onDestroy} from 'svelte';
-    import {goto} from "$app/navigation";
-    import AboutMe from "./Tiles/AboutMe.svelte";
+    import { writable } from 'svelte/store';
+    import { onMount, onDestroy } from 'svelte';
+    import { goto } from "$app/navigation";
     import WorkExperience from "./Tiles/WorkExperience.svelte";
-    import Education from "./Tiles/Education.svelte";
-    import Skills from "./Tiles/Skills.svelte";
+
 
     export let buttons = [];
     let expandedTile = writable(null);
     let isClosing = false;
 
     const dynamicButtons = [
-        {key: "workexperience.title", subClass: "medium-tile", link: null, content: WorkExperience},
+        { key: "workexperience.title", subClass: "medium-tile", link: null, content: WorkExperience },
     ];
 
     function expandTile(name, link) {
@@ -57,7 +55,7 @@
 </script>
 
 <div class="grid-container">
-    {#each dynamicButtons as {key, subClass, link, content}}
+    {#each dynamicButtons as { key, subClass, link, content }}
         <button class="grid-tile {subClass}" on:click={() => expandTile(key, link)}>
             <span>{key}</span>
         </button>
@@ -72,9 +70,9 @@
                 &larr;
             </button>
             <h1 class="expanded-title">{$expandedTile}</h1>
-            {#each dynamicButtons as {key, content}}
+            {#each dynamicButtons as { key, content }}
                 {#if $expandedTile === (key)}
-                    <svelte:component this={content}/>
+                    <svelte:component this={content} />
                 {/if}
             {/each}
         </div>

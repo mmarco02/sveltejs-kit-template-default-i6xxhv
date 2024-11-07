@@ -26,29 +26,29 @@
 
 <div class="work-experience">
     <div class="work-tile">
-        <h2>Praktikum, Agrana Pischelsdorf (2022)</h2>
+        <h2>test1</h2>
         <ul>
-            <li>Konfiguration von AccessPoints</li>
-            <li>1st und 2nd Level IT Support</li>
-            <li>Reparatur, Reinigung und Bearbeitung von elektronischen Geräten</li>
-            <li>Instandhaltung von Sicherheitsstandards und Software auf Arbeitsgeräten</li>
+            <li>test1</li>
+            <li>test1</li>
+            <li>test1</li>
+            <li>test1</li>
         </ul>
     </div>
 
     <div class="work-tile">
-        <h2>Praktikum, Exclusive Networks (2023)</h2>
+        <h2>test2</h2>
         <ul>
-            <li>Aufbau und Arbeit in Laborumgebungen mit Hardware- und Software-Komponenten.</li>
-            <li>Hardware-Komponente auf diverse Funktionen testen</li>
-            <li>Troubleshooting von Netzwerk-Komponenten</li>
+            <li>test2</li>
+            <li>test2</li>
+            <li>test2</li>
         </ul>
     </div>
 
     <div class="work-tile">
-        <h2>Nachhilfelehrer bei Schülerhilfe (2022-2024)</h2>
+        <h2>test3</h2>
         <ul>
-            <li>Deutsch, Englisch, Mathematik, Betriebswirtschaft</li>
-            <li>Umgang mit Kindern verschiedenen Alters</li>
+            <li>test3</li>
+            <li>test3</li>
         </ul>
     </div>
 </div>
